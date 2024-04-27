@@ -178,7 +178,7 @@ file(GLOB_RECURSE SOURCE_FILES
     ${CMAKE_SOURCE_DIR}/src/*.h)
 
 add_custom_target(
-    fmt
+    format
     COMMAND clang-format -i -style=file ${SOURCE_FILES}
     COMMENT "Running clang-format on source files"
 )
