@@ -6,7 +6,7 @@ set(SOURCE_DIRS
     "storage"
     "execution"
     "operator"
-    "vql"
+    # "vql"
     "plan"
 )
 
@@ -36,11 +36,13 @@ set(SPECIFIC_FILES_TO_REMOVE
 list(REMOVE_ITEM ALL_CPP_FILES ${SPECIFIC_FILES_TO_REMOVE})
 
 add_library(base STATIC ${ALL_CPP_FILES})
-target_link_libraries(base  GTest::gtest_main fmt::fmt tbb tbb xxhash vql antlr4-runtime)
+# target_link_libraries(base  GTest::gtest_main fmt::fmt tbb tbb xxhash vql antlr4-runtime)
+target_link_libraries(base  GTest::gtest_main fmt::fmt tbb tbb xxhash antlr4-runtime)
 
 
 add_executable(unit-test-base ${ALL_CPP_FILES})
-target_link_libraries(unit-test-base GTest::gtest_main fmt::fmt tbb tbb xxhash vql antlr4-runtime)
+# target_link_libraries(unit-test-base GTest::gtest_main fmt::fmt tbb tbb xxhash vql antlr4-runtime)
+target_link_libraries(unit-test-base GTest::gtest_main fmt::fmt tbb tbb xxhash antlr4-runtime)
 gtest_discover_tests(unit-test-base)
 
 # function(add_custom_library target_name source_directory)
@@ -59,9 +61,6 @@ add_executable(importer importer.cpp)
 list(APPEND EXE_TARGETS importer)
 
 target_link_libraries(importer base GTest::gtest GTest::gtest_main fmt::fmt tbb antlr4-runtime)
-
-
-
 
 
 add_subdirectory(testify)
