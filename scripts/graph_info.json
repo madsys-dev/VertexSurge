@@ -1,0 +1,90 @@
+{
+    "hilbert": true,
+    "hilbert_blocks": 1000,
+    "vlgpm path":"/home/xwy/Dataset/rjq-dataset",
+    "graphs": [
+        {
+            "name": "Twitter2010",
+            "type": "sn",
+            "input type": "snap-txt",
+            "undirected": false,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/twitter-2010/twitter-2010-edges.txt",
+            "store name": "sn-twitter2010"
+        },
+        {
+            "name": "LDBC_SF100",
+            "type": "sn",
+            "input type": "ldbc-bi",
+            "undirected": true,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/ldbc_snb_dataset/sf100_bi",
+            "store name":"sn-ldbc_sf100"
+        },
+        {
+            "name": "LDBC_SF1000",
+            "type": "sn",
+            "input type": "ldbc-ic",
+            "undirected": true,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/ldbc_snb_dataset/sf1000",
+            "store name":"sn-ldbc_sf1000"
+        },
+        {
+            "name": "Epinions1",
+            "type": "sn",
+            "input type": "snap-txt",
+            "undirected": true,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/soc-Epinions1.txt",
+            "store name":"sn-Epinions1"
+        },
+        {
+            "name": "LiveJournal1",
+            "type": "sn",
+            "input type": "snap-txt",
+            "undirected": true,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/soc-LiveJournal1.txt",
+            "store name":"sn-LiveJournal1"
+        },
+        {
+            "name": "LastFM",
+            "type": "sn",
+            "input type": "snap-csv",
+            "undirected": true,
+            "multiple edges": false,
+            "raw path": "/home/xwy/Dataset/lastfm_asia_edges.csv",
+            "store name":"sn-LastFM"
+        },
+        {
+            "name": "Rabobank",
+            "type": "bt",
+            "input type": "rabo",
+            "undirected": false,
+            "multiple edges": true,
+            "raw path": "/home/xwy/Dataset/rabobank_data.csv",
+            "store name":"bt-Rabobank"
+        },
+        {
+            "name": "LDBC-FIN_SF10",
+            "type": "bt",
+            "input type": "ldbc-fin",
+            "undirected": false,
+            "multiple edges": true,
+            "raw path": "/home/xwy/Dataset/ldbc-finance-sf10/sf10",
+            "store name": "bt-ldbc_sf10"
+        },
+        {
+            "name": "LDBC-FIN_SF10-L",
+            "type": "ldbc-fin",
+            "input type": "ldbc-fin",
+            "undirected": false,
+            "multiple edges": true,
+            "raw path": "/home/xwy/Dataset/ldbc-finance-sf10/sf10",
+            "param path": "/home/xwy/Dataset/ldbc-finance-sf10/sf10_read_params",
+            "store name": "ldbc-fin-ldbc_sf10"
+        }
+
+    ]
+}
