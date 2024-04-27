@@ -65,6 +65,8 @@ include_directories(${COMMON_INCLUDE_DIRS})
 
 include(FetchContent)
 
+find_package(TBB REQUIRED)
+
 # fmtlib
 find_package(fmt 9.1.0 QUIET)
 
@@ -76,6 +78,7 @@ if(NOT fmt_FOUND)
         GIT_TAG 9.1.0 # specify the exact version
     )
     FetchContent_MakeAvailable(fmtlib)
+    include_directories(${fmt_SOURCE_DIR}/include)
 endif()
 
 
@@ -91,6 +94,7 @@ if(NOT spdlog_FOUND)
         GIT_TAG v1.11.0 # specify the version you want
     )
     FetchContent_MakeAvailable(spdlog)
+    include_directories(${spdlog_SOURCE_DIR}/include)
 endif()
 
 
@@ -116,7 +120,7 @@ FetchContent_Declare(
     URL https://codeload.github.com/google/googletest/zip/refs/tags/v1.14.0
 )
 FetchContent_MakeAvailable(googletest)
-
+include_directories(${googletest_SOURCE_DIR}/include)
 enable_testing()
 
 

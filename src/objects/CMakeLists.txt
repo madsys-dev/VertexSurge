@@ -65,7 +65,7 @@ target_link_libraries(importer base GTest::gtest GTest::gtest_main fmt::fmt tbb 
 
 
 add_subdirectory(testify)
-add_subdirectory(vql)
+# add_subdirectory(vql)
 
 
 
